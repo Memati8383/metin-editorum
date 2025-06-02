@@ -126,15 +126,15 @@ class PerformanceMonitor:
 
 class TextEditor:  
     def __init__(self, root):  
+        # Ana pencere ayarları
         self.root = root  
         self.root.title("Python Metin Editörü")
         
-        # Tkinter değişkenleri
-        self.syntax_highlighting_var = tk.BooleanVar(value=True)
+        # Tkinter değişkenleri ve tema ayarları
+        self.syntax_highlighting_var = tk.BooleanVar(value=True)  # Sözdizimi vurgulama durumu
+        self.current_theme = tk.StringVar(value="Açık")  # Mevcut tema
         
-        self.current_theme = tk.StringVar(value="Açık")
-        
-        # Tema isimleri
+        # Tema isimleri ve açıklamaları
         self.theme_names = {
             "Açık": "Açık Tema",
             "Koyu": "Koyu Tema",
@@ -148,13 +148,13 @@ class TextEditor:
             "Tokyo Night": "Tokyo Night"
         }
         
-        # Sekme yönetimi
-        self.tabs = {}
-        self.current_tab = None
-        self.tab_counter = 0
-        self.last_directory = None
+        # Sekme yönetimi için değişkenler
+        self.tabs = {}  # Açık sekmeler
+        self.current_tab = None  # Aktif sekme
+        self.tab_counter = 0  # Sekme sayacı
+        self.last_directory = None  # Son kullanılan dizin
         
-        # Notebook widget'ı
+        # Notebook widget'ı oluşturma
         self.notebook = ttk.Notebook(self.root)
         self.notebook.pack(fill=tk.BOTH, expand=True)
         
@@ -168,37 +168,37 @@ class TextEditor:
         )
         
         # Tema ve sözdizimi vurgulama ayarları
-        self.syntax_highlighting = True
+        self.syntax_highlighting = True  # Sözdizimi vurgulama aktif
         
         # Sözdizimi vurgulama renkleri
         self.syntax_colors = {
-            "keywords": "#0000FF",      # Mavi
-            "strings": "#008000",       # Yeşil
-            "comments": "#808080",      # Gri
-            "functions": "#800080",     # Mor
-            "numbers": "#FF0000",       # Kırmızı
-            "classes": "#000080",       # Koyu Mavi
-            "decorators": "#800080",    # Mor
-            "builtins": "#008080",      # Turkuaz
-            "operators": "#000000",     # Siyah
-            "variables": "#000000",     # Siyah
-            "parameters": "#000000",    # Siyah
-            "types": "#000080",         # Koyu Mavi
-            "errors": "#FF0000",        # Kırmızı
-            "warnings": "#FFA500",      # Turuncu
-            "docstrings": "#008000",    # Yeşil
-            "tags": "#800000",          # Bordo
-            "attributes": "#008080",    # Turkuaz
-            "selectors": "#0000FF",     # Mavi
-            "properties": "#008080",    # Turkuaz
-            "values": "#008000",        # Yeşil
-            "headings": "#000080",      # Koyu Mavi
-            "links": "#0000FF",         # Mavi
-            "bold": "#000000",          # Siyah
-            "italic": "#000000",        # Siyah
-            "code": "#000000",          # Siyah
-            "lists": "#000000",         # Siyah
-            "quotes": "#008000"         # Yeşil
+            "keywords": "#0000FF",      # Anahtar kelimeler - Mavi
+            "strings": "#008000",       # Metin dizileri - Yeşil
+            "comments": "#808080",      # Yorumlar - Gri
+            "functions": "#800080",     # Fonksiyonlar - Mor
+            "numbers": "#FF0000",       # Sayılar - Kırmızı
+            "classes": "#000080",       # Sınıflar - Koyu Mavi
+            "decorators": "#800080",    # Dekoratörler - Mor
+            "builtins": "#008080",      # Yerleşik fonksiyonlar - Turkuaz
+            "operators": "#000000",     # Operatörler - Siyah
+            "variables": "#000000",     # Değişkenler - Siyah
+            "parameters": "#000000",    # Parametreler - Siyah
+            "types": "#000080",         # Tipler - Koyu Mavi
+            "errors": "#FF0000",        # Hatalar - Kırmızı
+            "warnings": "#FFA500",      # Uyarılar - Turuncu
+            "docstrings": "#008000",    # Dokümantasyon - Yeşil
+            "tags": "#800000",          # Etiketler - Bordo
+            "attributes": "#008080",    # Öznitelikler - Turkuaz
+            "selectors": "#0000FF",     # Seçiciler - Mavi
+            "properties": "#008080",    # Özellikler - Turkuaz
+            "values": "#008000",        # Değerler - Yeşil
+            "headings": "#000080",      # Başlıklar - Koyu Mavi
+            "links": "#0000FF",         # Bağlantılar - Mavi
+            "bold": "#000000",          # Kalın - Siyah
+            "italic": "#000000",        # İtalik - Siyah
+            "code": "#000000",          # Kod - Siyah
+            "lists": "#000000",         # Listeler - Siyah
+            "quotes": "#008000"         # Alıntılar - Yeşil
         }
         
         # Tema renkleri
@@ -910,7 +910,7 @@ class TextEditor:
             return True  # Hata durumunda güvenli çıkış
 
     def save_tab(self, tab_id=None):
-        """Belirtilen sekmeyi kaydeder"""
+        """Aktif sekmeyi kaydeder"""
         try:
             if tab_id is None:
                 tab_id = self.get_current_tab()
@@ -1064,7 +1064,7 @@ class TextEditor:
             return False
         
     def open_file_in_tab(self, file_path):
-        """Dosyayı yeni sekmede açar"""
+        """Dosyayı yeni bir sekmede açar"""
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
@@ -1084,7 +1084,7 @@ class TextEditor:
             return False
             
     def apply_theme_to_tab(self, tab_id):
-        """Belirtilen sekmeye tema uygular"""
+        """Seçili sekmeye tema uygular"""
         if tab_id not in self.tabs:
             return
             
@@ -1104,7 +1104,7 @@ class TextEditor:
             self.apply_syntax_highlighting_to_tab(tab_id)
             
     def apply_syntax_highlighting_to_tab(self, tab_id):
-        """Belirtilen sekmeye sözdizimi vurgulaması uygular"""
+        """Seçili sekmeye sözdizimi vurgulama uygular"""
         if tab_id not in self.tabs:
             return
             
@@ -1772,7 +1772,8 @@ class TextEditor:
         self.root.config(menu=menubar)
 
     def show_quick_start_guide(self):
-        """Başlangıç kılavuzunu gösterir"""
+        """Hızlı başlangıç kılavuzunu gösterir"""
+        # Hızlı başlangıç kılavuzu içeriği
         guide = [
             "Python Metin Editörü - Başlangıç Kılavuzu",
             "========================================",
@@ -1819,7 +1820,8 @@ class TextEditor:
         self.show_help_window("Başlangıç Kılavuzu", guide)
 
     def show_keyboard_shortcuts(self):
-        """Klavye kısayollarını gösterir"""
+        """Klavye kısayolları listesini gösterir"""
+        # Klavye kısayolları içeriği
         shortcuts = [
             "Klavye Kısayolları",
             "=================",
@@ -1853,7 +1855,8 @@ class TextEditor:
         self.show_help_window("Klavye Kısayolları", shortcuts)
 
     def show_faq(self):
-        """Sık sorulan soruları gösterir"""
+        """Sık sorulan sorular penceresini gösterir"""
+        # SSS içeriği
         faq = [
             "Sık Sorulan Sorular",
             "===================",
@@ -1888,6 +1891,7 @@ class TextEditor:
 
     def show_file_formats(self):
         """Desteklenen dosya formatlarını gösterir"""
+        # Dosya formatları içeriği
         formats = [
             "Desteklenen Dosya Formatları",
             "==========================",
@@ -1935,7 +1939,8 @@ class TextEditor:
         self.show_help_window("Desteklenen Dosya Formatları", formats)
 
     def show_theme_guide(self):
-        """Tema rehberini gösterir"""
+        """Tema kılavuzunu gösterir"""
+        # Tema kılavuzu içeriği
         themes = [
             "Tema Rehberi",
             "============",
@@ -2338,7 +2343,7 @@ class TextEditor:
             self.root.destroy()
         
     def undo(self):
-        """Son işlemi geri alır"""
+        """Son yapılan değişikliği geri alır"""
         text_widget = self.get_current_text_widget()
         if text_widget:
             try:
@@ -2347,7 +2352,7 @@ class TextEditor:
                 pass
                 
     def redo(self):
-        """Son geri alınan işlemi tekrarlar"""
+        """Son geri alınan değişikliği tekrar yapar"""
         text_widget = self.get_current_text_widget()
         if text_widget:
             try:
@@ -2374,7 +2379,7 @@ class TextEditor:
                 pass
                 
     def paste(self):
-        """Pano içeriğini yapıştırır"""
+        """Panodaki metni yapıştırır"""
         text_widget = self.get_current_text_widget()
         if text_widget:
             try:
@@ -2392,7 +2397,7 @@ class TextEditor:
             return 'break'
             
     def bind_shortcuts(self):
-        """Klavye kısayollarını bağlar"""
+        """Klavye kısayollarını tanımlar"""
         self.root.bind("<Control-n>", lambda e: self.new_file())
         self.root.bind("<Control-o>", lambda e: self.open_file())
         self.root.bind("<Control-s>", lambda e: self.save_file())
@@ -2409,7 +2414,7 @@ class TextEditor:
         self.root.bind("<F1>", lambda e: self.show_quick_start_guide())
         
     def apply_theme(self, theme_name):
-        """Temayı uygular"""
+        """Editöre tema uygular"""
         if theme_name not in self.theme_colors:
             return
             
@@ -2535,7 +2540,7 @@ class TextEditor:
                 inner_close_frame.bind("<Leave>", on_inner_leave)
             
     def toggle_syntax_highlighting(self):
-        """Sözdizimi vurgulamasını açıp kapatır"""
+        """Sözdizimi vurgulamayı açıp kapatır"""
         self.syntax_highlighting = not self.syntax_highlighting
         
         if self.syntax_highlighting:
@@ -2550,7 +2555,7 @@ class TextEditor:
                     text_widget.tag_remove(tag, "1.0", tk.END)
                     
     def on_key_release(self, event):
-        """Tuş bırakıldığında çağrılan fonksiyon"""
+        """Tuş bırakma olayını işler"""
         self.update_status_bar()
         self.highlight_current_line()
         self.matching_brackets()
@@ -2580,7 +2585,7 @@ class TextEditor:
                     self.update_tab_title(tab_id)
         
     def on_button_release(self, event):
-        """Fare düğmesi bırakıldığında çağrılan fonksiyon"""
+        """Fare düğmesi bırakma olayını işler"""
         self.update_status_bar()
         self.highlight_current_line()
         self.matching_brackets()
@@ -2798,7 +2803,7 @@ class TextEditor:
         self.theme_label.pack(side=tk.RIGHT, padx=5)
 
     def show_search_replace(self):
-        """Arama ve değiştirme çerçevesini gösterir"""
+        """Arama ve değiştirme penceresini gösterir"""
         if self.search_frame is None:
             # Arama çerçevesi
             self.search_frame = tk.Frame(self.root)
@@ -3053,7 +3058,7 @@ class TextEditor:
             self.search_frame.pack_forget()
             
     def search_text_in_current_tab(self):
-        """Mevcut sekmede metin arar"""
+        """Aktif sekmede metin arar"""
         start_time = time.time()
         try:
             text_widget = self.get_current_text_widget()
@@ -3095,7 +3100,7 @@ class TextEditor:
             self.performance_monitor.record_error("Arama Hatası", str(e))
 
     def replace_text_in_current_tab(self):
-        """Mevcut sekmede metni değiştirir"""
+        """Aktif sekmede metin değiştirir"""
         text_widget = self.get_current_text_widget()
         if not text_widget or not self.search_text.get():
             return
@@ -3129,7 +3134,7 @@ class TextEditor:
         text_widget.insert("1.0", new_content)
 
     def change_font(self):
-        """Yazı tipini değiştirir"""
+        """Yazı tipi değiştirme penceresini gösterir"""
         try:
             from tkinter import font
             
@@ -3787,18 +3792,21 @@ Hızlı kahverengi tilki
             else:
                 pos = text_widget.index(f"{pos}+1c")
 
+# Ana program başlangıcı
 if __name__ == "__main__":
+    # Ana pencere oluşturma
     root = tk.Tk()
     editor = TextEditor(root)
     
-    # Set dark theme as default
+    # Varsayılan olarak koyu tema uygula
     editor.apply_theme("Koyu")
     
-    # Start in fullscreen mode only on Windows
+    # Windows'ta tam ekran modunda başlat
     if platform.system() == "Windows":
-        root.state('zoomed')  # For Windows
+        root.state('zoomed')  # Windows için tam ekran
     
     # Çıkış yapmadan önce değişiklikleri kontrol et
     root.protocol("WM_DELETE_WINDOW", editor.exit_app)
     
+    # Ana döngüyü başlat
     root.mainloop() 

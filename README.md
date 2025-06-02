@@ -1,39 +1,39 @@
-# Modern Metin Editörü
+# 🖋️ Modern Metin Editörü
 
 Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı dostu bir metin editörüdür.
 
-![Metin Editörü Ekran Görüntüsü](saves/screenshot.png)
+🖼️ ![Metin Editörü Ekran Görüntüsü](saves/screenshot.png)
 
-### Ekran Görüntüleri
+### 📸 Ekran Görüntüleri
 
-#### Beyaz Tema
+#### 🌞 Beyaz Tema
 ![Beyaz Tema](saves/screenshott.png)
 
-#### Dosya Sekmesi
+#### 📁 Dosya Sekmesi
 ![Dosya Sekmesi](saves/screenshot-1.png)
 
-#### Düzenle Sekmesi
+#### ✏️ Düzenle Sekmesi
 ![Düzenle Sekmesi](saves/screenshot-2.png)
 
-#### Görünüm Sekmesi
+#### 👁️ Görünüm Sekmesi
 ![Görünüm Sekmesi](saves/screenshot-3.png)
 
-#### Yardım Sekmesi
+#### ❓ Yardım Sekmesi
 ![Yardım Sekmesi](saves/screenshot-4.png)
 
-## Özellikler
+## ✨ Özellikler
 
 - 🎨 Çoklu tema desteği (Açık/Koyu tema)
 - 📑 Çoklu sekme desteği
 - 🔍 Gelişmiş arama ve değiştirme özellikleri
 - 📝 Sözdizimi vurgulama desteği:
-  - Python
-  - HTML
-  - CSS
-  - JavaScript
-  - JSON
-  - XML
-  - Markdown
+  - 🐍 Python
+  - 🌐 HTML
+  - 🎨 CSS
+  - 📜 JavaScript
+  - 📦 JSON
+  - 📄 XML
+  - 📝 Markdown
 - 🎯 Otomatik parantez eşleştirme
 - 📊 Performans izleme ve raporlama
 - 🖱️ Sürükle-bırak sekme yönetimi
@@ -42,72 +42,72 @@ Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı 
 - 💾 Otomatik kaydetme ve değişiklik kontrolü
 - ⌨️ Klavye kısayolları desteği
 
-## Gereksinimler
+## 📋 Gereksinimler
 
-- Python 3.x
-- Tkinter (Python ile birlikte gelir)
-- platform (Python ile birlikte gelir)
+- 🐍 Python 3.x
+- 🖥️ Tkinter (Python ile birlikte gelir)
+- 💻 platform (Python ile birlikte gelir)
 
-## Kurulum
+## 🚀 Kurulum
 
-1. Projeyi klonlayın:
+1. 📥 Projeyi klonlayın:
 ```bash
 git clone https://github.com/Memati8383/metin-editorum.git
 ```
 
-2. Proje dizinine gidin:
+2. 📂 Proje dizinine gidin:
 ```bash
 cd metin-editorum
 ```
 
-3. Uygulamayı çalıştırın:
+3. ▶️ Uygulamayı çalıştırın:
 ```bash
 python editor.py
 ```
 
-## Kullanım
+## 📖 Kullanım
 
-### Temel İşlemler
-- Yeni Dosya: `Ctrl + N`
-- Dosya Aç: `Ctrl + O`
-- Kaydet: `Ctrl + S`
-- Farklı Kaydet: `Ctrl + Shift + S`
-- Tümünü Kaydet: `Ctrl + Alt + S`
+### 🔧 Temel İşlemler
+- 📄 Yeni Dosya: `Ctrl + N`
+- 📂 Dosya Aç: `Ctrl + O`
+- 💾 Kaydet: `Ctrl + S`
+- 💾 Farklı Kaydet: `Ctrl + Shift + S`
+- 💾 Tümünü Kaydet: `Ctrl + Alt + S`
 
-### Düzenleme
-- Geri Al: `Ctrl + Z`
-- Yeniden Yap: `Ctrl + Y`
-- Kes: `Ctrl + X`
-- Kopyala: `Ctrl + C`
-- Yapıştır: `Ctrl + V`
-- Tümünü Seç: `Ctrl + A`
+### ✂️ Düzenleme
+- ↩️ Geri Al: `Ctrl + Z`
+- ↪️ Yeniden Yap: `Ctrl + Y`
+- ✂️ Kes: `Ctrl + X`
+- 📋 Kopyala: `Ctrl + C`
+- 📎 Yapıştır: `Ctrl + V`
+- ✅ Tümünü Seç: `Ctrl + A`
 
-### Sekme İşlemleri
-- Yeni Sekme: `Ctrl + T`
-- Sekme Kapat: `Ctrl + W`
-- Tümünü Kapat: `Ctrl + Shift + W`
-- Sekmeler Arası Geçiş: `Ctrl + Tab`
+### 📑 Sekme İşlemleri
+- ➕ Yeni Sekme: `Ctrl + T`
+- ❌ Sekme Kapat: `Ctrl + W`
+- 🚫 Tümünü Kapat: `Ctrl + Shift + W`
+- 🔄 Sekmeler Arası Geçiş: `Ctrl + Tab`
 
-### Arama ve Değiştirme
-- Arama: `Ctrl + F`
-- Değiştirme: `Ctrl + H`
+### 🔎 Arama ve Değiştirme
+- 🔍 Arama: `Ctrl + F`
+- 🔄 Değiştirme: `Ctrl + H`
 
-## Katkıda Bulunma
+## 🤝 Katkıda Bulunma
 
-1. Bu depoyu fork edin
-2. Yeni bir özellik dalı oluşturun (`git checkout -b yeni-ozellik`)
-3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik: Açıklama'`)
-4. Dalınıza push yapın (`git push origin yeni-ozellik`)
-5. Bir Pull Request oluşturun
+1. 🍴 Bu depoyu fork edin
+2. 🌿 Yeni bir özellik dalı oluşturun (`git checkout -b yeni-ozellik`)
+3. 💾 Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik: Açıklama'`)
+4. 📤 Dalınıza push yapın (`git push origin yeni-ozellik`)
+5. 📬 Bir Pull Request oluşturun
 
-## Lisans
+## 📜 Lisans
 
 Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
 
-## İletişim
+## 📞 İletişim
 
 Sorularınız veya önerileriniz için lütfen bir issue açın.
 
-## Teşekkürler
+## 🙏 Teşekkürler
 
 Bu projeye katkıda bulunan herkese teşekkürler! 
