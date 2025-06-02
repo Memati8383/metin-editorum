@@ -4,6 +4,23 @@ Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı 
 
 ![Metin Editörü Ekran Görüntüsü](saves/screenshot.png)
 
+### Ekran Görüntüleri
+
+#### Beyaz Tema
+![Beyaz Tema](saves/screenshott.png)
+
+#### Dosya Sekmesi
+![Dosya Sekmesi](saves/screenshot-1.png)
+
+#### Düzenle Sekmesi
+![Düzenle Sekmesi](saves/screenshot-2.png)
+
+#### Görünüm Sekmesi
+![Görünüm Sekmesi](saves/screenshot-3.png)
+
+#### Yardım Sekmesi
+![Yardım Sekmesi](saves/screenshot-4.png)
+
 ## Özellikler
 
 - 🎨 Çoklu tema desteği (Açık/Koyu tema)
