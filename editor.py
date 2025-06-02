@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, font, colorchooser, ttk
 import os, re, json, shutil, time, threading, logging, traceback, psutil
 from datetime import datetime
+import platform
 
 class PerformanceMonitor:
     def __init__(self, editor):
@@ -3793,8 +3794,9 @@ if __name__ == "__main__":
     # Set dark theme as default
     editor.apply_theme("Koyu")
     
-    # Start in fullscreen mode
-    root.state('zoomed')  # For Windows
+    # Start in fullscreen mode only on Windows
+    if platform.system() == "Windows":
+        root.state('zoomed')  # For Windows
     
     # Çıkış yapmadan önce değişiklikleri kontrol et
     root.protocol("WM_DELETE_WINDOW", editor.exit_app)
