@@ -2,7 +2,7 @@
 
 Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı dostu bir metin editörüdür.
 
-![Metin Editörü Ekran Görüntüsü](asset/screenshot.png)
+![Metin Editörü Ekran Görüntüsü](saves/screenshot.png)
 
 ## Özellikler
 
