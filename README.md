@@ -33,12 +33,12 @@ Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı 
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/kullaniciadi/metin-editoru.git
+git clone https://github.com/Memati8383/metin-editorum.git
 ```
 
 2. Proje dizinine gidin:
 ```bash
-cd metin-editoru
+cd metin-editorum
 ```
 
 3. Uygulamayı çalıştırın:
