@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Platform](https://img.shields.io/badge/Platform-Terminal-lightgrey
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
 
 Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı dostu bir metin editörüdür.
 
