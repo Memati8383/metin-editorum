@@ -1,5 +1,9 @@
 # 🖋️ Modern Metin Editörü
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Platform](https://img.shields.io/badge/Platform-Terminal-lightgrey
+
 Bu proje, Python ve Tkinter kullanılarak geliştirilmiş modern ve kullanıcı dostu bir metin editörüdür.
 
 🖼️ ![Metin Editörü Ekran Görüntüsü](saves/screenshot.png)
